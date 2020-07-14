@@ -11,7 +11,13 @@ function drawMark(mark, pos) {
       ctx.beginPath();
       ctx.lineWidth = 2;
       ctx.strokeStyle = "#01bBC2";
-      ctx.arc(x + halfWidth, y + halfHeight, width / 3, 0, 2 * Math.PI);
+      ctx.arc(
+        x + halfWidth,
+        y + halfHeight,
+        Math.min(halfHeight, halfWidth) * 0.75,
+        0,
+        2 * Math.PI
+      );
       ctx.stroke();
       ctx.beginPath();
       ctx.lineWidth = 1;
