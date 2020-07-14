@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg">
+        <!-- Стартовый экран -->
+        <div class="startScreen screen">
+            <h1>
+                Крестики-нолики
+            </h1>
+            <div>
+                <label>
+                    Количество рядов
+                </label>
+                <input name="rows" placeholder="От 5 до 25" type="number">
+            </div>
+            <div class="startScreenRow">
+                <label>
+                    Количество колоннок
+                </label>
+                <input name="cols" placeholder="от 5 до 25" type="number">
+            </div>
+            <div class="startScreenRow">
+                <label>
+                    Игра против компьютера
+                </label>
+                <input checked type="checkbox" name="mode">
+            </div>
+            <div class="startScreenRow">
+                <button class="btn startBtn">Начать</button>
+            </div>
+        </div>
+        <!-- Игровое поле -->
+        <div class="gameScreen hidden">
+            <div class="cells"></div>
+            <canvas class="canvas"></canvas>
+            <div class="menu">
+                <button class="btn restartBtn">Начать заново</button>
+                <button class="btn openSettingsBtn">К настройкам</button>
+            </div>
+        </div>
+        <!-- Результаты -->
+        <div class="resultsScreen screen hidden">
+            <div>
+                <h1>
+                    Результат:
+                </h1>
+            </div>
+            <div class="resultsTxt"></div>
+            <div>
+                <button class="btn startOverBtn">Начать заново</button>
+            </div>
+        </div>
+    </div>
+    <script src="utils.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
